@@ -1,0 +1,10 @@
+def prime-num(n):
+    prime-num = [2]
+    while i < n:
+        for num in prime-num:
+            if i % num == 0:
+                break
+            else:
+                prime-num.append(i)
+        i++
+    return prime-num

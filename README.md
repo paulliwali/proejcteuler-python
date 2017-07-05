@@ -6,9 +6,6 @@ I have taken an introductory course on Python/General programming in first year 
  
 **While-at-it Goal:** To learn, *forcefully learn*, to use Vim as my primary development environment for Python. As well becoming comfortable working with Bash.
  
-My setup for completing the Project Euler problems will by my HP 11" Chromebook with [crouton](https://github.com/dnschneid/crouton) with just the CLI.
- 
- 
 **Resources:**
  
 - [Project Euler](projecteuler.net)

@@ -1,38 +1,21 @@
-def primeNum(n):
-    prime_num = [2]
-    i = 3
-    isPrime = False
+def primeNumber(num):
+    for i in range(2, num):
+        if num % i == 0:
+            return False
+    return True
 
-    while i < n:
-        for num in prime_num:
-            if i % num == 0:
-                isPrime = False
-                break
-            else:
-                isPrime = True
+def factorNumber(num):
+    factors = []
+    for i in range(2, int(round(num**(1/2), 0))):
+        if num % i == 0:
+            factors.append(i)
+    factors.sort(reverse=True)
+    return factors
 
-        if isPrime:
-             prime_num.append(i)
+def largestPrimefactorNumber(num):
+    factors = factorNumber(num)
+    for f in factors:
+        if primeNumber(f):
+            return f
 
-        isPrime = False
-        i = i + 1
-    return prime_num
-
-def factors(num, array):
-    n = num
-    factor = []
-
-    for f in array:
-        if n % f == 0:
-            factor.append(f)
-
-    return factor
-
-
-def largestPrimeFactor(n):
-    prime_num = primeNum(n)
-    prime_factors = factors(n, prime_num)
-
-    return max(prime_factors)
-
-print largestPrimeFactor(600851475143)
+print(largestPrimefactorNumber(600851475143))

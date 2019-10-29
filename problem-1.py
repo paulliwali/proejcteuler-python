@@ -1,13 +1,16 @@
-numList = []
-sum = 0
-
-for i in range(1000):
-    if i % 3 == 0 or i % 5 == 0:
-        numList.append(i)
+def multiples_check(num):
+    if ((num % 3) == 0 or (num % 5) == 0):
+        print("True")
+        return True
     else:
-        i+= 1
+        print("False")
+        return False
 
-for i in numList:
-    sum += i
+def loop_till(num):
+    cumulative_sum = 0
+    for i in range(1, num):
+        if multiples_check(i):
+            cumulative_sum += i
+        print(cumulative_sum)
 
-print(sum)
+loop_till(1000)

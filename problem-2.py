@@ -13,6 +13,6 @@ def fib(n):
     for i in fib:
         if i % 2 == 0:
             fib_even_sum += i
-        print fib_even_sum
+        print(fib_even_sum)
 
 fib(4000001)

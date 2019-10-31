@@ -1,6 +1,6 @@
 import unittest
 
-from euler import problem_1
+from euler import problem_1, problem_3
 
 class TestProblemOne(unittest.TestCase):
     def test_multiples_of_three_or_five(self):
@@ -19,8 +19,14 @@ class TestProblemOne(unittest.TestCase):
             result.append(problem_1.cumulative_sum(d))
         self.assertEqual(result, answer)
 
-class TestProblemTwo(unittest.TestCase):
-    def test
+class TestProblemThree(unittest.TestCase):
+    def test_prime_number(self):
+        data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+        answer = [False, True, True, False, True, False, True, False, False, False, True]
+        result = []
+        for d in data:
+            result.append(problem_3.prime_number(d))
+        self.assertEqual(result, answer)
 
 if __name__ == "__main__":
     unittest.main()

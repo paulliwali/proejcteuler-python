@@ -1,10 +1,11 @@
 def prime_number(num):
     if num == 1:
         return False
-    for i in range(2, num):
-        if num % i == 0:
-            return False
-    return True
+    else:
+        for i in range(2, num):
+            if num % i == 0:
+                return False
+        return True
 
 def factor_number(num):
     factors = []
@@ -19,5 +20,3 @@ def largestPrimefactorNumber(num):
     for f in factors:
         if prime_number(f):
             return f
-
-print(largestPrimefactorNumber(600851475143))
